@@ -1,4 +1,5 @@
 %define		mod_name	auth_any
+%define 	apxs		/usr/sbin/apxs
 Summary:	Basic authentication for the Apache Web server using arbitrary shell commands
 Summary(cs):	Základní autentizace pro WWW server Apache pomocí shellových pøíkazù
 Summary(da):	En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vilkårlige skal-kommandoer
@@ -31,13 +32,13 @@ Group(sv):	Nätverk/Demoner
 Group(uk):	íÅÒÅÖÁ/äÅÍÏÎÉ
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
 URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
-Prereq:		/usr/sbin/apxs
+Prereq:		%{_sbindir}/apxs
 Requires:	apache(EAPI)
-BuildRequires:	/usr/sbin/apxs
+BuildRequires:	%{apxs}
 BuildRequires:	apache(EAPI)-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_pkglibdir	%(/usr/sbin/apxs -q LIBEXECDIR)
+%define		_pkglibdir	%(%{apxs} -q LIBEXECDIR)
 
 %description
 This module allows you to use any command line program (such as
@@ -86,7 +87,7 @@ godtyckligt angivet kommando.
 %setup -q -n mod_%{mod_name}-%{version}
 
 %build
-/usr/sbin/apxs -c src/mod_%{mod_name}.c -o mod_%{mod_name}.so
+%{apxs} -c src/mod_%{mod_name}.c -o mod_%{mod_name}.so
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -100,14 +101,14 @@ gzip -9nf docs/*
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/usr/sbin/apxs -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
+%{_sbindir}/apxs -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
 if [ -f /var/lock/subsys/httpd ]; then
 	/etc/rc.d/init.d/httpd restart 1>&2
 fi
 
 %preun
 if [ "$1" = "0" ]; then
-	/usr/sbin/apxs -e -A -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
+	%{_sbindir}/apxs -e -A -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
 	if [ -f /var/lock/subsys/httpd ]; then
 		/etc/rc.d/init.d/httpd restart 1>&2
 	fi
