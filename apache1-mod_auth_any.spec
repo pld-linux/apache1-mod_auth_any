@@ -12,12 +12,11 @@ Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache-mod_%{mod_name}
-Version:	1.2.2
-Release:	2
+Version:	1.3
+Release:	1
 License:	BSD
 Group:		Networking/Daemons
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
-Patch0:		mod_auth_any-1.2.2-fork.patch
 URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
 Prereq:		%{_sbindir}/apxs
 Requires:	apache(EAPI)
@@ -71,9 +70,7 @@ servade av en webbserver genom att kontrollera returkoden från ett
 godtyckligt angivet kommando.
 
 %prep
-%setup -q -n mod_%{mod_name}-%{version}
-
-%patch -p1
+%setup -q -n mod_%{mod_name}
 
 %build
 %{apxs} -c src/mod_%{mod_name}.c -o mod_%{mod_name}.so
