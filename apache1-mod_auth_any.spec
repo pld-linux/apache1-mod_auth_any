@@ -21,7 +21,7 @@ Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{
 URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
 BuildRequires:	%{apxs}
 BuildRequires:	apache(EAPI)-devel
-Prereq:		%{_sbindir}/apxs
+Requires(post,preun):	%{apxs}
 Requires:	apache(EAPI)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
