@@ -12,8 +12,8 @@ Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache-mod_%{mod_name}
-Version:	1.2.1
-Release:	3
+Version:	1.2.2
+Release:	1
 License:	BSD
 Group:		Networking/Daemons
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
@@ -81,8 +81,6 @@ install -d $RPM_BUILD_ROOT%{_pkglibdir}
 
 install mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
 
-gzip -9nf docs/*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -102,5 +100,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
+%doc docs/*
 %attr(755,root,root) %{_pkglibdir}/*
-%doc docs/*.gz
