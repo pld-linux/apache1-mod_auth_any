@@ -13,7 +13,7 @@ Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubn
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache-mod_%{mod_name}
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Networking/Daemons
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
