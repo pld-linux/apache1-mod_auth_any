@@ -11,7 +11,7 @@ Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache-mod_%{mod_name}
-Version:	1.2
+Version:	1.2.1
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
