@@ -13,10 +13,11 @@ Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubn
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache-mod_%{mod_name}
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Networking/Daemons
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
+Patch0:		mod_auth_any-1.2.2-fork.patch
 URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
 Prereq:		%{_sbindir}/apxs
 Requires:	apache(EAPI)
@@ -71,6 +72,8 @@ godtyckligt angivet kommando.
 
 %prep
 %setup -q -n mod_%{mod_name}-%{version}
+
+%patch -p1
 
 %build
 %{apxs} -c src/mod_%{mod_name}.c -o mod_%{mod_name}.so
