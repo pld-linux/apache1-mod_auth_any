@@ -14,7 +14,7 @@ Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skal
 Name:		apache-mod_%{mod_name}
 Version:	1.2.1
 Release:	2
-License:	GPL
+License:	BSD
 Group:		Networking/Daemons
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
 URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
