@@ -13,7 +13,7 @@ Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubn
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache1-mod_%{mod_name}
 Version:	1.4
-Release:	1.5
+Release:	2
 Epoch:		1
 License:	BSD
 Group:		Networking/Daemons
