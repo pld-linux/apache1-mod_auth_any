@@ -7,7 +7,7 @@ Summary(de):	Authentifizierung für den Apache Web-Server, der arbiträre Shell-Be
 Summary(fr):	Authentification de base pour le serveur Web Apache utilisant des commandes shell arbitraires
 Summary(it):	Autenticazione di base per il server Web Apache mediante comandi arbitrari della shell
 Summary(nb):	En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
-Summary(pl):	Podstawowy modu³ autentykacji dla Apache, u¿ywaj±cy poleceñ pow³oki
+Summary(pl):	Podstawowy modu³ uwierzytelnienia dla Apache, u¿ywaj±cy poleceñ pow³oki
 Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
@@ -63,7 +63,7 @@ Mod_auth_any ¤ÏÇ¤°Õ¤Ë»ØÄê¤µ¤ì¤¿¥³¥Þ¥ó¥É¤ÎÌá¤ê¥³¡¼¥É¤ò¥Á¥§¥Ã¥¯¤¹¤ë¤³¤È
 
 %description -l pl
 Ten modu³ pozwala na u¿ycie dowolnego programu dzia³aj±cego z linii
-poleceñ (jak np. webNIS) do autentykacji u¿ytkownika.
+poleceñ (jak np. webNIS) do uwierzytelniania u¿ytkownika.
 
 %description -l sv
 Mod_auth_any kan användas för att begränsa åtkomsten till dokument
