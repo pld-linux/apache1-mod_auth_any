@@ -1,5 +1,5 @@
-%define		mod_name	auth_any
-%define 	apxs		/usr/sbin/apxs
+%define	mod_name	auth_any
+%define	apxs	/usr/sbin/apxs1
 Summary:	Basic authentication for the Apache Web server using arbitrary shell commands
 Summary(cs):	Základní autentizace pro WWW server Apache pomocí shellových pøíkazù
 Summary(da):	En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vilkårlige skal-kommandoer
@@ -11,18 +11,21 @@ Summary(pl):	Podstawowy modu³ uwierzytelnienia dla Apache, u¿ywaj±cy poleceñ pow
 Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
-Name:		apache-mod_%{mod_name}
-Version:	1.3
+Name:		apache1-mod_%{mod_name}
+Version:	1.4
 Release:	1
+Epoch:		1
 License:	BSD
 Group:		Networking/Daemons
-Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
-# Source0-md5:	847d209b295a02f48e9ea3d55dac652a
-URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
+Source0:	http://www.itlab.musc.edu/webNIS/dist/mod_%{mod_name}-%{version}.tar.gz
+# Source0-md5:	73e2aef19a126b77190e59b20486c8d9
+URL:		http://www.itlab.musc.edu/webNIS/mod_auth_any.html
 BuildRequires:	%{apxs}
-BuildRequires:	apache(EAPI)-devel
+BuildRequires:	apache1-devel
 Requires(post,preun):	%{apxs}
-Requires:	apache(EAPI)
+Requires:	apache1
+# weird versioning scheme...
+Obsoletes:	apache-mod_%{mod_name} <= 1:%{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR)
@@ -87,15 +90,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %{apxs} -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
-if [ -f /var/lock/subsys/httpd ]; then
-	/etc/rc.d/init.d/httpd restart 1>&2
+if [ -f /var/lock/subsys/apache ]; then
+	/etc/rc.d/init.d/apache restart 1>&2
 fi
 
 %preun
 if [ "$1" = "0" ]; then
 	%{apxs} -e -A -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
-	if [ -f /var/lock/subsys/httpd ]; then
-		/etc/rc.d/init.d/httpd restart 1>&2
+	if [ -f /var/lock/subsys/apache ]; then
+		/etc/rc.d/init.d/apache restart 1>&2
 	fi
 fi
 
