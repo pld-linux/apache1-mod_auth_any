@@ -83,7 +83,7 @@ servade av en webbserver genom att kontrollera returkoden från ett
 godtyckligt angivet kommando.
 
 %prep
-%setup -q -n mod_%{mod_name}
+%setup -q -n mod_%{mod_name}-%{version}
 
 %build
 /usr/sbin/apxs -c src/mod_%{mod_name}.c -o mod_%{mod_name}.so
