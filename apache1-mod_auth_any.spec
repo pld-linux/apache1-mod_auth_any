@@ -12,13 +12,13 @@ Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
 Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache1-mod_%{mod_name}
-Version:	1.4
-Release:	2
+Version:	1.5
+Release:	1
 Epoch:		1
 License:	BSD
 Group:		Networking/Daemons
 Source0:	http://www.itlab.musc.edu/webNIS/dist/mod_%{mod_name}-%{version}.tar.gz
-# Source0-md5:	73e2aef19a126b77190e59b20486c8d9
+# Source0-md5:	a78780db253dd2dc33138f8b644423d2
 URL:		http://www.itlab.musc.edu/webNIS/mod_auth_any.html
 BuildRequires:	%{apxs}
 BuildRequires:	apache1-devel >= 1.3.33-2
