@@ -3,7 +3,7 @@ Summary:	This is the any authentication module for Apache
 Summary(pl):	To jest modu³ dowolnej autentykacji dla Apache
 Name:		apache-mod_%{mod_name}
 Version:	1.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Daemons
 Group(de):	Netzwerkwesen/Server
