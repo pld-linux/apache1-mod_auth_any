@@ -6,7 +6,7 @@ Summary(da):	En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vi
 Summary(de):	Authentifizierung für den Apache Web-Server, der arbiträre Shell-Befehle verwendet
 Summary(fr):	Authentification de base pour le serveur Web Apache utilisant des commandes shell arbitraires
 Summary(it):	Autenticazione di base per il server Web Apache mediante comandi arbitrari della shell
-Summary(no):	En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
+Summary(nb):	En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
 Summary(pl):	Podstawowy modu³ autentykacji dla Apache, u¿ywaj±cy poleceñ pow³oki
 Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
 Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
