@@ -19,10 +19,10 @@ Group:		Networking/Daemons
 Source0:	ftp://ftp.itlab.musc.edu/pub/toolbox/mod_%{mod_name}/mod_%{mod_name}-%{version}.tar.gz
 # Source0-md5:	847d209b295a02f48e9ea3d55dac652a
 URL:		http://www.itlab.musc.edu/~nafees/mod_%{mod_name}.html
-Prereq:		%{_sbindir}/apxs
-Requires:	apache(EAPI)
 BuildRequires:	%{apxs}
 BuildRequires:	apache(EAPI)-devel
+Prereq:		%{_sbindir}/apxs
+Requires:	apache(EAPI)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR)
