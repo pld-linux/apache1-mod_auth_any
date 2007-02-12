@@ -1,16 +1,16 @@
 %define	mod_name	auth_any
 %define	apxs	/usr/sbin/apxs1
 Summary:	Basic authentication for the Apache Web server using arbitrary shell commands
-Summary(cs):	Základní autentizace pro WWW server Apache pomocí shellovıch pøíkazù
-Summary(da):	En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vilkårlige skal-kommandoer
-Summary(de):	Authentifizierung für den Apache Web-Server, der arbiträre Shell-Befehle verwendet
-Summary(fr):	Authentification de base pour le serveur Web Apache utilisant des commandes shell arbitraires
-Summary(it):	Autenticazione di base per il server Web Apache mediante comandi arbitrari della shell
-Summary(nb):	En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
-Summary(pl):	Podstawowy modu³ uwierzytelnienia dla Apache, u¿ywaj±cy poleceñ pow³oki
-Summary(pt):	Um módulo de autenticação de LDAP para o servidor Web Apache
-Summary(sl):	Osnovna avtentikacija za spletni stre¾nik Apache, z uporabo poljubnih lupinskih ukazov
-Summary(sv):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
+Summary(cs.UTF-8):   ZÃ¡kladnÃ­ autentizace pro WWW server Apache pomocÃ­ shellovÃ½ch pÅ™Ã­kazÅ¯
+Summary(da.UTF-8):   En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vilkÃ¥rlige skal-kommandoer
+Summary(de.UTF-8):   Authentifizierung fÃ¼r den Apache Web-Server, der arbitrÃ¤re Shell-Befehle verwendet
+Summary(fr.UTF-8):   Authentification de base pour le serveur Web Apache utilisant des commandes shell arbitraires
+Summary(it.UTF-8):   Autenticazione di base per il server Web Apache mediante comandi arbitrari della shell
+Summary(nb.UTF-8):   En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
+Summary(pl.UTF-8):   Podstawowy moduÅ‚ uwierzytelnienia dla Apache, uÅ¼ywajÄ…cy poleceÅ„ powÅ‚oki
+Summary(pt.UTF-8):   Um mÃ³dulo de autenticaÃ§Ã£o de LDAP para o servidor Web Apache
+Summary(sl.UTF-8):   Osnovna avtentikacija za spletni streÅ¾nik Apache, z uporabo poljubnih lupinskih ukazov
+Summary(sv.UTF-8):   GrundlÃ¤ggande autentisering fÃ¶r webbservern Apache med valfria skalkommandon
 Name:		apache1-mod_%{mod_name}
 Version:	1.5
 Release:	2
@@ -35,43 +35,43 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module allows you to use any command line program (such as
 webNIS) to authenticate a user.
 
-%description -l cs
-Balíèek mod_auth_any slou¾í pro omezení pøístupu k dokumentùm, které
-poskytuje WWW server Apache. Jména a hesla jsou kontrolována pomocí
-jakéhokoliv pøíkazu (jeho návratovım kódem).
+%description -l cs.UTF-8
+BalÃ­Äek mod_auth_any slouÅ¾Ã­ pro omezenÃ­ pÅ™Ã­stupu k dokumentÅ¯m, kterÃ©
+poskytuje WWW server Apache. JmÃ©na a hesla jsou kontrolovÃ¡na pomocÃ­
+jakÃ©hokoliv pÅ™Ã­kazu (jeho nÃ¡vratovÃ½m kÃ³dem).
 
-%description -l de
+%description -l de.UTF-8
 Mod_auth_any kann verwendet werden, um den Zugriff auf von einem Web-
-Server bediente Dokumente zu beschränken, indem es den Rückcode eines
-gegebenen arbiträren Befehls prüft.
+Server bediente Dokumente zu beschrÃ¤nken, indem es den RÃ¼ckcode eines
+gegebenen arbitrÃ¤ren Befehls prÃ¼ft.
 
-%description -l es
+%description -l es.UTF-8
 Mod_auth_any puede usarse para limitar el acceso a documentos servidos
-desde un servidor web verificando el código de retorno de un comando
+desde un servidor web verificando el cÃ³digo de retorno de un comando
 arbitrario especificado.
 
-%description -l fr
-Mod_auth_any peut être utilisé pour limiter l'accès à des documents
-servis par un serveur Web en vérifiant le code de retour d'une
-commande spécifiée arbitraire.
+%description -l fr.UTF-8
+Mod_auth_any peut Ãªtre utilisÃ© pour limiter l'accÃ¨s Ã  des documents
+servis par un serveur Web en vÃ©rifiant le code de retour d'une
+commande spÃ©cifiÃ©e arbitraire.
 
-%description -l it
-Mod_auth_any può essere utilizzato per limitare l'accesso ai documenti
+%description -l it.UTF-8
+Mod_auth_any puÃ² essere utilizzato per limitare l'accesso ai documenti
 serviti da un server Web controllando il codice di ritorno di un dato
 comando arbitrario.
 
-%description -l ja
-Mod_auth_any ¤ÏÇ¤°Õ¤Ë»ØÄê¤µ¤ì¤¿¥³¥Ş¥ó¥É¤ÎÌá¤ê¥³¡¼¥É¤ò¥Á¥§¥Ã¥¯¤¹¤ë¤³¤È
-¤Ë¤è¤Ã¤Æ¡¢Web ¥µ¡¼¥Ğ¡¼¤¬Äó¶¡¤¹¤ë¥É¥­¥å¥á¥ó¥È¤Ø¤Î¥¢¥¯¥»¥¹¤òÀ©¸Â¤¹¤ë¤³¤È
-¤¬¤Ç¤­¤Ş¤¹¡£
+%description -l ja.UTF-8
+Mod_auth_any ã¯ä»»æ„ã«æŒ‡å®šã•ã‚ŒãŸã‚³ãƒãƒ³ãƒ‰ã®æˆ»ã‚Šã‚³ãƒ¼ãƒ‰ã‚’ãƒã‚§ãƒƒã‚¯ã™ã‚‹ã“ã¨
+ã«ã‚ˆã£ã¦ã€Web ã‚µãƒ¼ãƒãƒ¼ãŒæä¾›ã™ã‚‹ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚’åˆ¶é™ã™ã‚‹ã“ã¨
+ãŒã§ãã¾ã™ã€‚
 
-%description -l pl
-Ten modu³ pozwala na u¿ycie dowolnego programu dzia³aj±cego z linii
-poleceñ (jak np. webNIS) do uwierzytelniania u¿ytkownika.
+%description -l pl.UTF-8
+Ten moduÅ‚ pozwala na uÅ¼ycie dowolnego programu dziaÅ‚ajÄ…cego z linii
+poleceÅ„ (jak np. webNIS) do uwierzytelniania uÅ¼ytkownika.
 
-%description -l sv
-Mod_auth_any kan användas för att begränsa åtkomsten till dokument
-servade av en webbserver genom att kontrollera returkoden från ett
+%description -l sv.UTF-8
+Mod_auth_any kan anvÃ¤ndas fÃ¶r att begrÃ¤nsa Ã¥tkomsten till dokument
+servade av en webbserver genom att kontrollera returkoden frÃ¥n ett
 godtyckligt angivet kommando.
 
 %prep
