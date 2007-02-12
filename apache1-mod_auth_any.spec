@@ -1,16 +1,16 @@
 %define	mod_name	auth_any
 %define	apxs	/usr/sbin/apxs1
 Summary:	Basic authentication for the Apache Web server using arbitrary shell commands
-Summary(cs.UTF-8):   Základní autentizace pro WWW server Apache pomocí shellových příkazů
-Summary(da.UTF-8):   En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vilkårlige skal-kommandoer
-Summary(de.UTF-8):   Authentifizierung für den Apache Web-Server, der arbiträre Shell-Befehle verwendet
-Summary(fr.UTF-8):   Authentification de base pour le serveur Web Apache utilisant des commandes shell arbitraires
-Summary(it.UTF-8):   Autenticazione di base per il server Web Apache mediante comandi arbitrari della shell
-Summary(nb.UTF-8):   En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
-Summary(pl.UTF-8):   Podstawowy moduł uwierzytelnienia dla Apache, używający poleceń powłoki
-Summary(pt.UTF-8):   Um módulo de autenticação de LDAP para o servidor Web Apache
-Summary(sl.UTF-8):   Osnovna avtentikacija za spletni strežnik Apache, z uporabo poljubnih lupinskih ukazov
-Summary(sv.UTF-8):   Grundläggande autentisering för webbservern Apache med valfria skalkommandon
+Summary(cs.UTF-8):	Základní autentizace pro WWW server Apache pomocí shellových příkazů
+Summary(da.UTF-8):	En autenticeringsmodul for webtjeneren Apache hvor man kan bruge vilkårlige skal-kommandoer
+Summary(de.UTF-8):	Authentifizierung für den Apache Web-Server, der arbiträre Shell-Befehle verwendet
+Summary(fr.UTF-8):	Authentification de base pour le serveur Web Apache utilisant des commandes shell arbitraires
+Summary(it.UTF-8):	Autenticazione di base per il server Web Apache mediante comandi arbitrari della shell
+Summary(nb.UTF-8):	En autentiseringsmodul for webtjeneren Apache der en kan bruke skall-kommandoer
+Summary(pl.UTF-8):	Podstawowy moduł uwierzytelnienia dla Apache, używający poleceń powłoki
+Summary(pt.UTF-8):	Um módulo de autenticação de LDAP para o servidor Web Apache
+Summary(sl.UTF-8):	Osnovna avtentikacija za spletni strežnik Apache, z uporabo poljubnih lupinskih ukazov
+Summary(sv.UTF-8):	Grundläggande autentisering för webbservern Apache med valfria skalkommandon
 Name:		apache1-mod_%{mod_name}
 Version:	1.5
 Release:	2
