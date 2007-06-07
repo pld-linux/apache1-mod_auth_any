@@ -20,7 +20,7 @@ Group:		Networking/Daemons
 Source0:	http://www.itlab.musc.edu/webNIS/dist/mod_%{mod_name}-%{version}.tar.gz
 # Source0-md5:	a78780db253dd2dc33138f8b644423d2
 URL:		http://www.itlab.musc.edu/webNIS/mod_auth_any.html
-BuildRequires:	%{apxs}
+BuildRequires:	apache1-apxs
 BuildRequires:	apache1-devel >= 1.3.33-2
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(triggerpostun):	%{apxs}
